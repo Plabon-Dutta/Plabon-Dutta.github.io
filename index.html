@@ -1,1081 +1,937 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Jayonto Dutta Plabon — Lecturer, Researcher, and PhD Aspirant specializing in LLMs, Federated Learning, and Generative AI. Published in IEEE Access, Elsevier, and more.">
-<meta name="keywords" content="Jayonto Dutta Plabon, Plabon Dutta, Plabon, Plabon UAP, Jayoto UAP, PhD Aspirant, LLM, Federated Learning, NLP, UAP, Bangladesh, Australia, Researcher">
-<meta property="og:title" content="Jayonto Dutta Plabon — Researcher & PhD Aspirant">
-<meta property="og:description" content="Lecturer at UAP. Researcher in LLMs, Federated Learning, Generative AI. ICPC Regionalist. Seeking PhD opportunities in Australia.">
-<title>Jayonto Dutta Plabon — Researcher & PhD Aspirant</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  /* ── THEME TOKENS ── */
-  [data-theme="light"] {
-    --bg: #f7f5f0;
-    --bg2: #edeae2;
-    --ink: #1a1814;
-    --ink2: #4a4640;
-    --ink3: #8a8680;
-    --accent: #1d4e4a;
-    --accent2: #2d7a6e;
-    --accent-light: #e8f4f2;
-    --gold: #b5872a;
-    --border: #d8d4cc;
-    --white: #ffffff;
-    --card-bg: #ffffff;
-    --nav-bg: rgba(247,245,240,0.92);
-    --shadow: rgba(0,0,0,0.06);
-    --contact: #32343407;
-    --backtotop: #070c0c;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jayonto Dutta Plabon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.setAttribute('data-theme', savedTheme || (prefersDark ? 'dark' : 'light'));
+    })();
+  </script>
+  <style>
+    [data-theme="light"] {
+      --navy: #1a2744;
+      --navy-light: #243258;
+      --accent: #c0392b;
+      --accent-soft: #e8d5d3;
+      --text: #1c1c1c;
+      --text-muted: #555;
+      --text-light: #888;
+      --border: #e0e0e0;
+      --bg: #fafaf8;
+      --bg-card: #ffffff;
+      --link: #1a5276;
+      --link-hover: #c0392b;
+      --nav-bg: rgba(250, 250, 248, 0.9);
+      --shadow: rgba(26, 39, 68, 0.08);
+    }
 
-  [data-theme="dark"] {
-    --bg: #0f1210;
-    --bg2: #161c1a;
-    --ink: #e8e4dc;
-    --ink2: #a8a49c;
-    --ink3: #6a6660;
-    --accent: #4db8aa;
-    --accent2: #6dd4c4;
-    --accent-light: #0d2e2a;
-    --gold: #d4a84a;
-    --border: #2a302e;
-    --white: #1a2220;
-    --card-bg: #161c1a;
-    --nav-bg: rgba(15,18,16,0.92);
-    --shadow: rgba(0,0,0,0.3);
-    --contact: #83d3c80d;
-    --backtotop: #e8e4dc;
-  }
+    [data-theme="dark"] {
+      --navy: #d8e2f5;
+      --navy-light: #9fb2d3;
+      --accent: #ef8d7d;
+      --accent-soft: #3d2420;
+      --text: #ece9e3;
+      --text-muted: #b0aba1;
+      --text-light: #817c72;
+      --border: #2b302f;
+      --bg: #0f1210;
+      --bg-card: #161b19;
+      --link: #7ec8ff;
+      --link-hover: #ffd18a;
+      --nav-bg: rgba(15, 18, 16, 0.88);
+      --shadow: rgba(0, 0, 0, 0.32);
+    }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--ink);
-    overflow-x: hidden;
-    transition: background 0.3s, color 0.3s;
-  }
+    html { scroll-behavior: smooth; }
 
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 1000; opacity: 0.4;
-  }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
 
-  /* ── SCROLL BAR ── */
-  .scroll-indicator {
-    position: fixed; top: 0; left: 0;
-    height: 2px; background: var(--accent);
-    z-index: 999; transition: width 0.1s;
-  }
+    /* NAV */
+    nav {
+      background: var(--nav-bg);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 1px 0 var(--shadow);
+      max-width: 940px;
+      margin: 0 auto;
+    }
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 900;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 4rem;
-    background: var(--nav-bg);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-    transition: all 0.3s ease;
-  }
-  nav.scrolled { padding: 0.8rem 4rem; box-shadow: 0 2px 20px var(--shadow); }
+    .nav-brand {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--navy);
+      white-space: nowrap;
+    }
 
-  .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem; color: var(--accent); letter-spacing: -0.02em;
-  }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      justify-self: end;
+      margin: 0;
+    }
 
-  .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
-  .nav-links a {
-    font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 500;
-    color: var(--ink2); text-decoration: none; letter-spacing: 0.08em;
-    text-transform: uppercase; transition: color 0.2s; position: relative;
-  }
-  .nav-links a::after {
-    content: ''; position: absolute; bottom: -3px; left: 0; right: 0;
-    height: 1px; background: var(--accent); transform: scaleX(0); transition: transform 0.2s;
-  }
-  .nav-links a:hover, .nav-links a.active { color: var(--accent); }
-  .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+    nav ul li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 0.35rem 0;
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.2s ease;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      position: relative;
+    }
 
-  /* Theme toggle */
-  .theme-toggle {
-    background: none; border: 1px solid var(--border); border-radius: 20px;
-    padding: 0.3rem 0.7rem; cursor: pointer; font-size: 0.8rem;
-    color: var(--ink2); transition: all 0.2s; display: flex; align-items: center; gap: 0.3rem;
-    font-family: 'DM Mono', monospace; letter-spacing: 0.05em;
-  }
-  .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: var(--navy);
+    }
 
-  /* Hamburger */
-  .hamburger {
-    display: none; flex-direction: column; gap: 5px;
-    cursor: pointer; background: none; border: none; padding: 4px;
-  }
-  .hamburger span {
-    display: block; width: 22px; height: 2px;
-    background: var(--ink); border-radius: 2px; transition: all 0.3s;
-  }
-  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -0.2rem;
+      height: 1px;
+      background: var(--navy);
+      transform: scaleX(0);
+      transition: transform 0.2s ease;
+      transform-origin: center;
+    }
 
-  /* Mobile menu */
-  .mobile-menu {
-    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--bg); z-index: 800; flex-direction: column;
-    align-items: center; justify-content: center; gap: 2rem;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    font-family: 'DM Serif Display', serif; font-size: 2rem;
-    color: var(--ink); text-decoration: none; transition: color 0.2s;
-  }
-  .mobile-menu a:hover { color: var(--accent); }
+    nav ul li a:hover::after,
+    nav ul li a.active::after {
+      transform: scaleX(1);
+    }
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center; padding: 0 4rem; gap: 4rem; padding-top: 5rem;
-    position: relative; overflow: hidden;
-  }
-  .hero-bg-text {
-    position: absolute; right: -2rem; bottom: -1rem;
-    font-family: 'DM Serif Display', serif; font-size: 18rem;
-    color: var(--border); opacity: 0.25; pointer-events: none;
-    line-height: 1; user-select: none;
-  }
-  .hero-left { position: relative; z-index: 2; }
+    .theme-toggle {
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      border-radius: 999px;
+      width: 2.2rem;
+      height: 2.2rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+      flex-shrink: 0;
+      justify-self: end;
+    }
 
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    font-family: 'DM Mono', monospace; font-size: 0.7rem;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent2); background: var(--accent-light);
-    border: 1px solid var(--accent2); padding: 0.3rem 0.8rem;
-    border-radius: 2px; margin-bottom: 1.5rem;
-    opacity: 0; animation: fadeUp 0.6s ease 0.2s forwards;
-  }
-  .hero-tag::before { content: '●'; font-size: 0.5rem; animation: pulse 2s ease infinite; }
+    .theme-toggle:hover {
+      transform: translateY(-1px);
+      border-color: var(--navy);
+      color: var(--navy);
+    }
 
-  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+    .theme-toggle:focus-visible,
+    nav ul li a:focus-visible {
+      outline: 2px solid var(--navy);
+      outline-offset: 2px;
+    }
 
-  .hero-name {
-    font-family: 'DM Serif Display', serif; font-size: 4.2rem;
-    line-height: 1.05; letter-spacing: -0.03em; color: var(--ink);
-    margin-bottom: 0.3rem; opacity: 0; animation: fadeUp 0.6s ease 0.3s forwards;
-  }
-  .hero-name span { color: var(--accent); }
+    /* MAIN LAYOUT */
+    main {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
 
-  .hero-tagline {
-    font-family: 'DM Serif Display', serif; font-style: italic;
-    font-size: 1.1rem; color: var(--ink3); margin-bottom: 1.5rem;
-    opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards;
-  }
-  .hero-desc {
-    font-size: 0.95rem; line-height: 1.75; color: var(--ink2);
-    max-width: 480px; margin-bottom: 2rem;
-    opacity: 0; animation: fadeUp 0.6s ease 0.5s forwards;
-  }
-  .hero-stats {
-    display: flex; gap: 2rem; margin-bottom: 2.5rem;
-    opacity: 0; animation: fadeUp 0.6s ease 0.6s forwards;
-  }
-  .stat { display: flex; flex-direction: column; gap: 0.2rem; }
-  .stat-num {
-    font-family: 'DM Serif Display', serif; font-size: 1.8rem;
-    color: var(--accent); line-height: 1;
-  }
-  .stat-label {
-    font-family: 'DM Mono', monospace; font-size: 0.62rem;
-    text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink3);
-  }
-  .hero-actions {
-    display: flex; gap: 1rem; flex-wrap: wrap;
-    opacity: 0; animation: fadeUp 0.6s ease 0.7s forwards;
-  }
-  .btn-primary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: var(--accent); color: #fff; padding: 0.75rem 1.5rem;
-    font-family: 'DM Mono', monospace; font-size: 0.72rem;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    text-decoration: none; border: none; cursor: pointer;
-    transition: all 0.2s; border-radius: 2px;
-  }
-  .btn-primary:hover { background: var(--accent2); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(29,78,74,0.25); }
-  .btn-secondary {
-    display: inline-flex; align-items: center; gap: 0.5rem;
-    background: transparent; color: var(--accent); padding: 0.75rem 1.5rem;
-    font-family: 'DM Mono', monospace; font-size: 0.72rem;
-    letter-spacing: 0.08em; text-transform: uppercase;
-    text-decoration: none; border: 1px solid var(--accent);
-    cursor: pointer; transition: all 0.2s; border-radius: 2px;
-  }
-  .btn-secondary:hover { background: var(--accent-light); transform: translateY(-1px); }
+    /* ABOUT */
+    #about {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+    }
 
-  .hero-right {
-    display: flex; flex-direction: column; gap: 1rem;
-    opacity: 0; animation: fadeLeft 0.8s ease 0.5s forwards;
-    position: relative; z-index: 2;
-  }
-  .info-card {
-    background: var(--card-bg); border: 1px solid var(--border);
-    padding: 1.2rem 1.5rem; border-radius: 4px;
-    box-shadow: 0 2px 8px var(--shadow); transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .info-card:hover { transform: translateX(4px); box-shadow: 0 4px 16px var(--shadow); }
-  .info-card-label {
-    font-family: 'DM Mono', monospace; font-size: 0.62rem;
-    text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink3); margin-bottom: 0.4rem;
-  }
-  .info-card-value { font-size: 0.9rem; color: var(--ink); font-weight: 500; }
-  .info-card-value a { color: var(--accent2); text-decoration: none; }
-  .info-card-value a:hover { text-decoration: underline; }
+    .profile-photo {
+      width: 180px;
+      height: 215px;
+      object-fit: cover;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 13px;
+      text-align: center;
+    }
 
-  .interest-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
-  .tag {
-    font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.06em;
-    background: var(--accent-light); color: var(--accent);
-    border: 1px solid rgba(77,184,170,0.3); padding: 0.2rem 0.6rem; border-radius: 2px;
-  }
+    .profile-photo-placeholder {
+      width: 180px;
+      height: 215px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-card) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-  /* ── SECTIONS ── */
-  section { padding: 6rem 4rem; position: relative; }
-  section:nth-child(even) { background: var(--white); }
+    .profile-photo-placeholder svg {
+      width: 64px;
+      height: 64px;
+      opacity: 0.4;
+    }
 
-  .section-header {
-    display: flex; align-items: baseline; gap: 1rem; margin-bottom: 3rem;
-  }
-  .section-num {
-    font-family: 'DM Mono', monospace; font-size: 0.7rem;
-    color: var(--accent2); letter-spacing: 0.1em;
-  }
-  .section-title {
-    font-family: 'DM Serif Display', serif; font-size: 2.2rem;
-    color: var(--ink); letter-spacing: -0.02em;
-  }
-  .section-line { flex: 1; height: 1px; background: var(--border); margin-left: 1rem; }
+    .about-text h1 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+      line-height: 1.2;
+    }
 
-  /* ── ABOUT ── */
-  .about-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; align-items: start; }
-  .about-text p {
-    font-size: 0.95rem; line-height: 1.85; color: var(--ink2); margin-bottom: 1.2rem;
-  }
-  .about-text p:last-child { margin-bottom: 0; }
-  .about-sidebar { display: flex; flex-direction: column; gap: 1rem; }
-  .sidebar-card {
-    background: var(--bg); border: 1px solid var(--border);
-    padding: 1rem 1.2rem; border-radius: 4px;
-  }
-  .sidebar-card-label {
-    font-family: 'DM Mono', monospace; font-size: 0.6rem;
-    text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink3); margin-bottom: 0.5rem;
-  }
-  .sidebar-card-value { font-size: 0.85rem; color: var(--ink); line-height: 1.6; }
+    .about-text .subtitle {
+      color: var(--text-muted);
+      font-size: 13.5px;
+      margin-bottom: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
 
-  /* ── PUBLICATIONS ── */
-  .pub-list { display: flex; flex-direction: column; gap: 1.5rem; }
-  .pub-item {
-    background: var(--card-bg); border: 1px solid var(--border);
-    border-left: 3px solid var(--accent); padding: 1.5rem;
-    border-radius: 0 4px 4px 0; transition: all 0.2s; cursor: pointer;
-  }
-  .pub-item:hover { border-left-color: var(--accent2); box-shadow: 0 4px 16px var(--shadow); transform: translateX(4px); }
-  .pub-badges { display: flex; gap: 0.4rem; margin-bottom: 0.7rem; flex-wrap: wrap; }
-  .badge {
-    font-family: 'DM Mono', monospace; font-size: 0.58rem; letter-spacing: 0.08em;
-    text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 2px; font-weight: 500;
-  }
-  .badge-q1 { background: #fef3cd; color: #856404; border: 1px solid #ffc107; }
-  .badge-ieee { background: #cce5ff; color: #004085; border: 1px solid #4da3ff; }
-  .badge-elsevier { background: #d4edda; color: #155724; border: 1px solid #28a745; }
-  .badge-journal { background: var(--accent-light); color: var(--accent); border: 1px solid var(--accent2); }
-  [data-theme="dark"] .badge-q1 { background: #3d2e00; color: #ffd45e; border-color: #b8860b; }
-  [data-theme="dark"] .badge-ieee { background: #002244; color: #7ec8ff; border-color: #2255aa; }
-  [data-theme="dark"] .badge-elsevier { background: #0a2a14; color: #5dce7a; border-color: #1a6b30; }
+    .about-text p {
+      color: var(--text);
+      font-size: 14.5px;
+      margin-bottom: 0.85rem;
+      line-height: 1.75;
+      text-align: justify;
+      text-justify: inter-word;
+    }
 
-  .pub-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); margin-bottom: 0.4rem; line-height: 1.5; }
-  .pub-journal { font-style: italic; font-size: 0.85rem; color: var(--ink2); margin-bottom: 0.3rem; }
-  .pub-year { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--ink3); }
+    .about-text p:last-of-type { margin-bottom: 1.2rem; }
 
-  /* ── EDUCATION ── */
-  .edu-timeline { position: relative; padding-left: 2rem; }
-  .edu-timeline::before {
-    content: ''; position: absolute; left: 0; top: 0.5rem; bottom: 0;
-    width: 1px; background: var(--border);
-  }
-  .edu-item {
-    position: relative; padding-bottom: 2.5rem;
-    opacity: 0; transform: translateY(20px); transition: all 0.5s ease;
-  }
-  .edu-item.visible { opacity: 1; transform: translateY(0); }
-  .edu-item::before {
-    content: ''; position: absolute; left: -2rem; top: 0.4rem;
-    width: 9px; height: 9px; border-radius: 50%;
-    background: var(--accent); border: 2px solid var(--bg);
-    box-shadow: 0 0 0 2px var(--accent);
-  }
-  .edu-period {
-    font-family: 'DM Mono', monospace; font-size: 0.68rem;
-    color: var(--ink3); letter-spacing: 0.06em; margin-bottom: 0.3rem;
-  }
-  .edu-degree { font-family: 'DM Serif Display', serif; font-size: 1.15rem; color: var(--ink); margin-bottom: 0.2rem; }
-  .edu-institution { font-size: 0.88rem; color: var(--accent2); font-weight: 500; margin-bottom: 0.3rem; }
-  .edu-detail { font-size: 0.82rem; color: var(--ink3); }
+    a {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
 
-  /* ── EXPERIENCE ── */
-  .exp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
-  .exp-card {
-    background: var(--card-bg); border: 1px solid var(--border);
-    padding: 1.5rem; border-radius: 4px; transition: all 0.2s;
-    opacity: 0; transform: translateY(20px);
-  }
-  .exp-card.visible { opacity: 1; transform: translateY(0); }
-  .exp-card:hover { border-color: var(--accent2); box-shadow: 0 4px 16px var(--shadow); }
-  .exp-period {
-    font-family: 'DM Mono', monospace; font-size: 0.62rem;
-    color: var(--accent2); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem;
-  }
-  .exp-title { font-weight: 600; font-size: 0.95rem; color: var(--ink); margin-bottom: 0.2rem; }
-  .exp-org { font-size: 0.85rem; color: var(--ink2); margin-bottom: 0.7rem; }
-  .exp-desc { font-size: 0.82rem; color: var(--ink3); line-height: 1.6; }
+    a:hover {
+      color: var(--link-hover);
+      border-bottom-color: var(--link-hover);
+    }
 
-  /* ── AWARDS ── */
-  .awards-section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
-  .awards-category-title {
-    font-family: 'DM Mono', monospace; font-size: 0.68rem;
-    text-transform: uppercase; letter-spacing: 0.12em;
-    color: var(--accent2); margin-bottom: 1rem;
-    padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
-  }
-  .awards-list { display: flex; flex-direction: column; gap: 0.8rem; }
-  .award-item {
-    display: flex; align-items: flex-start; gap: 0.8rem;
-    background: var(--card-bg); border: 1px solid var(--border);
-    padding: 0.9rem 1rem; border-radius: 4px; transition: all 0.2s;
-    opacity: 0; transform: translateY(10px);
-  }
-  .award-item.visible { opacity: 1; transform: translateY(0); }
-  .award-item:hover { border-color: var(--gold); box-shadow: 0 2px 10px rgba(181,135,42,0.1); }
-  .award-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
-  .award-content { flex: 1; }
-  .award-title { font-weight: 600; font-size: 0.85rem; color: var(--ink); margin-bottom: 0.15rem; line-height: 1.4; }
-  .award-org { font-size: 0.75rem; color: var(--ink3); font-family: 'DM Mono', monospace; }
+    /* SOCIAL LINKS */
+    .social-links {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
 
-  /* ── CP ── */
-  .cp-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-bottom: 2rem; }
-  .cp-stat {
-    background: var(--card-bg); border: 1px solid var(--border);
-    padding: 1.5rem; text-align: center; border-radius: 4px; transition: all 0.2s;
-  }
-  .cp-stat:hover { border-color: var(--accent2); transform: translateY(-2px); }
-  .cp-stat-num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: var(--accent); margin-bottom: 0.3rem; }
-  .cp-stat-label {
-    font-family: 'DM Mono', monospace; font-size: 0.62rem;
-    text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink3);
-  }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 12.5px;
+      color: var(--navy);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 4px 10px;
+      background: var(--bg-card);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: background 0.15s, border-color 0.15s, color 0.15s;
+      text-decoration: none;
+    }
 
-  /* ── DOCS ── */
-  .docs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.2rem; }
-  .doc-card {
-    background: var(--card-bg); border: 1px solid var(--border);
-    padding: 1.8rem; border-radius: 4px; text-align: center;
-    text-decoration: none; transition: all 0.25s;
-    display: flex; flex-direction: column; align-items: center; gap: 0.8rem; cursor: pointer;
-  }
-  .doc-card:hover {
-    border-color: var(--accent); background: var(--accent-light);
-    transform: translateY(-3px); box-shadow: 0 8px 24px rgba(29,78,74,0.12);
-  }
-  .doc-icon {
-    width: 48px; height: 48px; background: var(--accent-light);
-    border: 1px solid var(--accent2); border-radius: 4px;
-    display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
-  }
-  .doc-title { font-weight: 600; font-size: 0.9rem; color: var(--ink); }
-  .doc-desc { font-size: 0.78rem; color: var(--ink3); line-height: 1.5; }
-  .doc-action {
-    font-family: 'DM Mono', monospace; font-size: 0.62rem;
-    text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent2); margin-top: auto;
-  }
+    [data-theme="dark"] .social-links a {
+      border-color: #37403b;
+      background: #141815;
+    }
 
-  /* ── CONTACT ── */
-  #contact { background: var(--contact); color: var(--ink); }
-  #contact .section-title { color: var(--ink); }
-  #contact .section-num { color: var(--accent); }
-  #contact .section-line { background: var(--border); }
-  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-  .contact-left p { color: var(--ink); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2rem; }
-  .contact-links { display: flex; flex-direction: column; gap: 0.8rem; }
-  .contact-link {
-    display: flex; align-items: center; gap: 0.8rem;
-    color: var(--ink); text-decoration: none; font-size: 0.88rem; transition: color 0.2s;
-  }
-  .contact-link:hover { color: #319fa1; }
-  .contact-link-icon {
-    width: 32px; height: 32px; background: rgba(255,255,255,0.1);
-    border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem;
-  }
-  .open-to {
-    background: var(--card-bg); border: 1px solid var(--ink);
-    border-radius: 4px; padding: 1.5rem;
-  }
-  .open-to-label {
-    font-family: 'DM Mono', monospace; font-size: 0.62rem;
-    text-transform: uppercase; letter-spacing: 0.1em;
-    color: var(--ink); margin-bottom: 0.5rem;
-  }
-  .open-to-text { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 1rem; }
-  .open-to-items { display: flex; flex-direction: column; gap: 0.4rem; }
-  .open-to-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--ink); }
-  .open-to-item::before { content: '→'; color: var(--accent); }
+    .social-links a:hover {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
 
-  /* ── BACK TO TOP BUTTON ── */
-  .back-to-top {
-    position: fixed; bottom: 2rem; right: 2rem;
-    width: 44px; height: 44px;
-    background: var(--backtotop); color: var(--accent-light);
-    border: none; border-radius: 4px; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.2rem; z-index: 800;
-    opacity: 0; visibility: hidden; transition: all 0.3s ease;
-    box-shadow: 0 4px 12px var(--shadow);
-  }
-  .back-to-top.show { opacity: 1; visibility: visible; }
-  .back-to-top:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 6px 16px var(--shadow); }
-  
-  @media (max-width: 900px) {
-    .back-to-top { bottom: 1.5rem; right: 1.5rem; width: 40px; height: 40px; font-size: 1rem; }
-  }
-  
-  @media (max-width: 600px) {
-    .back-to-top { bottom: 1rem; right: 1rem; width: 36px; height: 36px; font-size: 0.9rem; }
-  }
+    /* SECTION HEADERS */
+    .section-title {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1.45rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--navy);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
 
-  /* ── FOOTER ── */
-  footer {
-    background: var(--accent-light); color: var(--ink);
-    text-align: center; padding: 1.5rem 4rem;
-    font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.08em;
-  }
+    section { margin-bottom: 3rem; }
 
-  /* ── MODAL ── */
-  .modal-overlay {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.65);
-    backdrop-filter: blur(4px); z-index: 2000;
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; pointer-events: none; transition: opacity 0.3s;
-  }
-  .modal-overlay.open { opacity: 1; pointer-events: all; }
-  .modal {
-    background: var(--card-bg); border-radius: 6px; padding: 2rem;
-    max-width: 600px; width: 90%; max-height: 80vh; overflow-y: auto;
-    transform: translateY(20px); transition: transform 0.3s; position: relative;
-    border: 1px solid var(--border);
-  }
-  .modal-overlay.open .modal { transform: translateY(0); }
-  .modal-close {
-    position: absolute; top: 1rem; right: 1rem; background: none;
-    border: none; font-size: 1.2rem; cursor: pointer; color: var(--ink3); transition: color 0.2s;
-  }
-  .modal-close:hover { color: var(--ink); }
-  .modal-title { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 0.5rem; padding-right: 2rem; }
-  .modal-journal { font-style: italic; font-size: 0.88rem; color: var(--ink2); margin-bottom: 0.5rem; }
-  .modal-meta { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--ink3); margin-bottom: 1rem; }
-  .modal-abstract { font-size: 0.88rem; line-height: 1.75; color: var(--ink2); margin-bottom: 1.2rem; }
+    /* NEWS TABLE */
+    .news-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
-  @keyframes fadeLeft { from{opacity:0;transform:translateX(20px)} to{opacity:1;transform:translateX(0)} }
+    .news-feed {
+      max-height: 248px;
+      overflow-y: auto;
+      padding-right: 0.35rem;
+      scrollbar-gutter: stable;
+    }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    nav { padding: 1rem 1.5rem; }
-    nav.scrolled { padding: 0.7rem 1.5rem; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    #hero { grid-template-columns: 1fr; padding: 2rem 1.5rem; padding-top: 6rem; gap: 2rem; }
-    .hero-name { font-size: 2.8rem; }
-    .hero-bg-text { display: none; }
-    section { padding: 4rem 1.5rem; }
-    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .exp-grid { grid-template-columns: 1fr; }
-    .awards-section-grid { grid-template-columns: 1fr; gap: 2rem; }
-    .cp-grid { grid-template-columns: repeat(2,1fr); }
-    .docs-grid { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-  }
+    .news-feed::-webkit-scrollbar {
+      width: 8px;
+    }
 
-  @media (max-width: 600px) {
-    .hero-stats { flex-wrap: wrap; gap: 1rem; }
-    .cp-grid { grid-template-columns: 1fr 1fr; }
-  }
+    .news-feed::-webkit-scrollbar-track {
+      background: transparent;
+    }
 
-  .note-text {
-    font-family: 'DM Mono', monospace; font-size: 0.72rem;
-    color: var(--ink3); margin-top: 1.2rem; padding: 0.7rem 1rem;
-    border-left: 2px solid var(--border); background: var(--bg2);
-  }
-</style>
+    .news-feed::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 999px;
+    }
+
+    .news-feed::-webkit-scrollbar-thumb:hover {
+      background: var(--text-light);
+    }
+
+    .news-table tr {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .news-table tr:last-child { border-bottom: none; }
+
+    .news-table td {
+      padding: 0.6rem 0.5rem;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .news-table td:last-child {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .news-table td:first-child {
+      white-space: nowrap;
+      color: var(--text-light);
+      font-size: 12.5px;
+      font-weight: 500;
+      padding-right: 1.5rem;
+      padding-top: 0.75rem;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.03em;
+    }
+
+    .news-hint {
+      margin-top: 0.8rem;
+      font-size: 12px;
+      color: var(--text-light);
+      text-align: right;
+      letter-spacing: 0.02em;
+    }
+
+    /* PUBLICATIONS */
+    .pub-list { list-style: none; }
+
+    .pub-item {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .pub-item:last-child { border-bottom: none; }
+
+    .pub-venue {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 3px 7px;
+      border-radius: 3px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      white-space: nowrap;
+      margin-top: 3px;
+    }
+
+    .pub-venue.q1 { background: #1a5276; }
+    .pub-venue.q2 { background: #515a5a; }
+    .pub-venue.conf { background: #6d4c41; }
+    .pub-venue.book { background: #2e7d32; }
+    .pub-venue.collab { background: #6a1b9a; }
+
+    .pub-title {
+      font-family: 'Crimson Pro', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+      margin-bottom: 0.25rem;
+    }
+
+    .pub-authors {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+      line-height: 1.5;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .pub-authors strong { color: var(--text); }
+
+    .pub-journal {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 0.35rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .pub-meta {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pub-badge {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 2px;
+      font-weight: 500;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .pub-badge.cite {
+      background: var(--accent-soft);
+      border-color: rgba(192, 57, 43, 0.2);
+      color: var(--navy);
+    }
+
+    .pub-link {
+      font-size: 12px;
+      color: var(--link);
+      border: none;
+      font-weight: 500;
+      padding: 2px 6px;
+      border-radius: 2px;
+      background: #eaf2fb;
+      transition: background 0.15s;
+    }
+
+    .pub-link:hover {
+      background: var(--link);
+      color: #fff;
+    }
+
+    /* SERVICE */
+    .service-list { list-style: none; }
+
+    .service-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .service-item:last-child { border-bottom: none; }
+
+    .service-role {
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--navy);
+      margin-bottom: 0.15rem;
+    }
+
+    .service-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .service-date {
+      font-size: 12.5px;
+      color: var(--text-light);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      padding-top: 2px;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 12.5px;
+      color: var(--text-light);
+      max-width: 940px;
+      margin: 0 auto;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 620px) {
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0.85rem 1rem;
+        max-width: none;
+      }
+
+      .nav-brand {
+        font-size: 1rem;
+      }
+
+      nav ul {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        justify-content: flex-start;
+        gap: 0.85rem;
+        overflow-x: auto;
+        padding-bottom: 0.1rem;
+      }
+
+      .news-feed {
+        max-height: 280px;
+      }
+
+      #about {
+        grid-template-columns: 1fr;
+      }
+      .profile-photo-placeholder {
+        width: 140px;
+        height: 168px;
+        margin: 0 auto;
+      }
+      .pub-item {
+
+      .news-feed {
+        max-height: 280px;
+      }
+        grid-template-columns: 1fr;
+      }
+      .pub-venue {
+        display: inline-block;
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    /* FADE IN */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #about { animation: fadeUp 0.5s ease both; }
+    section:nth-child(2) { animation: fadeUp 0.5s 0.1s ease both; }
+    section:nth-child(3) { animation: fadeUp 0.5s 0.2s ease both; }
+    section:nth-child(4) { animation: fadeUp 0.5s 0.3s ease both; }
+  </style>
 </head>
 <body>
 
-<div class="scroll-indicator" id="scrollBar"></div>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()">About</a>
-  <a href="#publications" onclick="closeMobile()">Research</a>
-  <a href="#education" onclick="closeMobile()">Education</a>
-  <a href="#experience" onclick="closeMobile()">Experience</a>
-  <a href="#awards" onclick="closeMobile()">Awards</a>
-  <a href="#cp" onclick="closeMobile()">CP</a>
-  <a href="#documents" onclick="closeMobile()">Documents</a>
-  <a href="#contact" onclick="closeMobile()">Contact</a>
-</div>
-
-<!-- NAV -->
-<nav id="navbar">
-  <div class="nav-logo">J. D. Plabon</div>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#about">About</a></li>
-    <li><a href="#publications">Research</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#awards">Awards</a></li>
-    <li><a href="#cp">CP</a></li>
-    <li><a href="#documents">Documents</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li>
-      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
-        <span id="themeIcon">🌙</span> Dark
-      </button>
-    </li>
+<nav>
+  <span class="nav-brand">J.D. Plabon</span>
+  <ul>
+    <li><a href="#about" class="active">About</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#service">Service</a></li>
+    <li><a href="cv.pdf" onclick="event.preventDefault();window.open('Statement of Purpose_Plabon.pdf', '_blank')">CV</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" onclick="toggleMobile()">
-    <span></span><span></span><span></span>
-  </button>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">☀</button>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-left">
-    <div class="hero-tag">PhD Aspirant</div>
-    <h1 class="hero-name">Jayonto<br>Dutta <span>Plabon</span></h1>
-    <p class="hero-tagline">Built from struggle, driven by purpose.</p>
-    <p class="hero-desc">
-      Lecturer in CSE at University of Asia Pacific, Bangladesh.<br>Researcher in LLMs, Federated Learning, and Generative AI. Published in IEEE Access, Elsevier, and more. ICPC Regionalist. Aspiring to pursue doctoral research.
-    </p>
-    <div class="hero-stats">
-      <div class="stat"><span class="stat-num">5</span><span class="stat-label">Journals</span></div>
-      <div class="stat"><span class="stat-num">2K+</span><span class="stat-label">Problems Solved</span></div>
-      <div class="stat"><span class="stat-num">3×</span><span class="stat-label">ICPC Regionalist</span></div>
-      <div class="stat"><span class="stat-num">6×</span><span class="stat-label">VC Honor Award</span></div>
-    </div>
-    <div class="hero-actions">
-      <a href="#publications" class="btn-primary">View Research →</a>
-      <a href="#contact" class="btn-secondary">Get in Touch</a>
-    </div>
-  </div>
+<main>
 
-  <div class="hero-right">
-    <div class="info-card">
-      <div class="info-card-label">Current Position</div>
-      <div class="info-card-value">Lecturer, Dept. of CSE · University of Asia Pacific (UAP)</div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="profile-photo-placeholder">
+      <img src="Photo of Plabon.jpeg" style="width:180px;height:215px;object-fit:cover;border-radius:4px;">
+      <!-- <svg viewBox="0 0 24 24" fill="none" stroke="#1a2744" stroke-width="1.2"> -->
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
     </div>
-    <div class="info-card">
-      <div class="info-card-label">Education</div>
-      <div class="info-card-value">M.Sc. CSE (Expected July 2026) · B.Sc. CSE · UAP, Bangladesh</div>
-    </div>
-    <div class="info-card">
-      <div class="info-card-label">Research Interests</div>
-      <div class="interest-tags">
-        <span class="tag">LLMs</span>
-        <span class="tag">Federated Learning</span>
-        <span class="tag">Explainable AI (X-AI)</span>
-        <span class="tag">Generative AI</span>
-        <span class="tag">NLP</span>
-        <span class="tag">Computer Vision</span>
-        <span class="tag">ML / DL</span>
-        <span class="tag">Cyber-Physical Security</span>
-      </div>
-    </div>
-    <div class="info-card">
-      <div class="info-card-label">Profiles</div>
-      <div class="info-card-value" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.3rem;">
-        <a href="mailto:connectplabon@gmail.com">✉ Email</a>
-        <a href="https://linkedin.com/in/jayonto-dutta-plabon" target="_blank">💼 LinkedIn</a>
-        <a href="https://github.com/Plabon-Dutta" target="_blank">💻 GitHub</a>
-        <a href="https://scholar.google.com/citations?user=Rt2lAwsAAAAJ&hl=en&oi=ao" target="_blank">🎓 Google Scholar</a>
-      </div>
-    </div>
-  </div>
-  <div class="hero-bg-text">J. D. Plabon </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-header">
-    <span class="section-num">01</span>
-    <h2 class="section-title">About Me</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="about-grid">
     <div class="about-text">
-      <p>I am Jayonto Dutta Plabon, a Lecturer in the Department of Computer Science and Engineering at the University of Asia Pacific (UAP), Dhaka, Bangladesh, where I am also completing my Master of Science in Computer Science (expected July 2026). My academic and professional journey is driven by a deep passion for research and a strong aspiration to pursue doctoral studies.</p>
-      <p>My primary research interests span <strong>Large Language Models (LLMs), Federated Learning (FL), Explainable AI (X-AI), Generative AI, Natural Language Processing (NLP), Computer Vision, Machine Learning, Deep Learning,</strong> and <strong>IoT</strong>. I have published research in high-impact, peer-reviewed venues including <em>Engineering Applications of Artificial Intelligence</em>, <em>IEEE Access</em>, and <em>Computers and Electrical Engineering</em>, as well as contributing book chapters to Elsevier publications.</p>
-      <p>Alongside my academic responsibilities, I serve as <strong>Co-convenor of the UAP Programming Contest Club</strong>, mentoring students in competitive programming. As an ICPC Regionalist (2021, 2023, 2024) and Codeforces Specialist, I bring rigorous analytical thinking into my research practice.</p>
-      <p>I am currently seeking PhD opportunities where I can deepen my expertise, contribute meaningfully to the global research community, and work alongside leading scholars to address real-world challenges through intelligent systems.</p>
-    </div>
-    <div class="about-sidebar">
-      <div class="sidebar-card">
-        <div class="sidebar-card-label">Location</div>
-        <div class="sidebar-card-value">Dhaka, Bangladesh</div>
-      </div>
-      <div class="sidebar-card">
-        <div class="sidebar-card-label">Open For</div>
-        <div class="sidebar-card-value">Fully Funded PhD Opportunities</div>
-      </div>
-      <div class="sidebar-card">
-        <div class="sidebar-card-label">Languages</div>
-        <div class="sidebar-card-value">Bengali (Native) · English (Professional) · IELTS scheduled Aug 2026</div>
-      </div>
-      <div class="sidebar-card">
-        <div class="sidebar-card-label">Research Area</div>
-        <div class="sidebar-card-value">LLMs · Federated Learning · Cyber-Physical Security</div>
-      </div>
-    </div>
-  </div>
-</section>
+      <h1>Jayonto Dutta Plabon</h1>
+      <p class="subtitle">Lecturer &amp; Researcher</p>
 
-<!-- PUBLICATIONS -->
-<section id="publications">
-  <div class="section-header">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Research & Publications</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="pub-list">
-    <div class="pub-item" onclick="openModal('pub1')">
-      <div class="pub-badges">
-        <span class="badge badge-q1">Q1</span>
-        <span class="badge badge-elsevier">Elsevier</span>
-        <span class="badge badge-journal">Journal</span>
-      </div>
-      <div class="pub-title">Explainable federated learning for privacy-preserving bangla sign language detection</div>
-      <div class="pub-journal">Engineering Applications of Artificial Intelligence</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub2')">
-      <div class="pub-badges">
-        <span class="badge badge-q1">Q1</span>
-        <span class="badge badge-ieee">IEEE</span>
-        <span class="badge badge-journal">Journal</span>
-      </div>
-      <div class="pub-title">Federated learning-based architecture for personalized next emoji prediction for social media comments</div>
-      <div class="pub-journal">IEEE Access</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub3')">
-      <div class="pub-badges">
-        <span class="badge badge-q1">Q1</span>
-        <span class="badge badge-ieee">Elsevier</span>
-        <span class="badge badge-journal">Journal</span>
-        <span class="badge badge-journal">Review Article</span>
-      </div>
-      <div class="pub-title">Open problems and challenges in federated learning for IoT: A comprehensive review and strategic guide</div>
-      <div class="pub-journal">Computers and Electrical Engineering</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub4')">
-      <div class="pub-badges">
-        <span class="badge badge-q1">Q1</span>
-        <span class="badge badge-ieee">IEEE</span>
-        <span class="badge badge-journal">Journal</span>
-        <span class="badge badge-journal">Review Article</span>
-      </div>
-      <div class="pub-title">From Centralization to Decentralization: Blockchain’s Role in Transforming Social Media Platforms</div>
-      <div class="pub-journal">IEEE Access</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub5')">
-      <div class="pub-badges">
-        <span class="badge badge-q1">Q1</span>
-        <span class="badge badge-elsevier">Clinical Reviews in Allergy & Immunology</span>
-        <span class="badge badge-journal">Journal</span>
-        <span class="badge badge-journal">Review Article</span>
-      </div>
-      <div class="pub-title">A Multisectoral Study of Mpox Epidemiology, Resistance Surveillance, and Policy Gaps: Toward a One Health Framework</div>
-      <div class="pub-journal">Clinical Reviews in Allergy & Immunology</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub6')">
-      <div class="pub-badges">
-        <span class="badge badge-elsevier">HCI</span>
-        <span class="badge badge-journal">Conference</span>
-      </div>
-      <div class="pub-title">Personalized Pomodoro Productivity Tracking with Privacy-Preserving Machine Learning in Human-Computer Interaction</div>
-      <div class="pub-journal">International Conference on Human-Computer Interaction</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub7')">
-      <div class="pub-badges">
-        <span class="badge badge-elsevier">Elsevier</span>
-        <span class="badge badge-journal">Book Chapter</span>
-      </div>
-      <div class="pub-title">Federated Learning Strategies for Confidential Leukemia Detection from Medical Images</div>
-      <div class="pub-journal">Springer Nature Singapore</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub8')">
-      <div class="pub-badges">
-        <span class="badge badge-elsevier">Elsevier</span>
-        <span class="badge badge-journal">Book Chapter</span>
-      </div>
-      <div class="pub-title">Privacy-Preserving Kidney Stone Detection from X-Ray Image Using Federated Learning</div>
-      <div class="pub-journal">Springer Nature Singapore</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-    <div class="pub-item" onclick="openModal('pub9')">
-      <div class="pub-badges">
-        <span class="badge badge-elsevier">Elsevier</span>
-        <span class="badge badge-journal">Book Chapter</span>
-      </div>
-      <div class="pub-title">Transforming Healthcare Analytics: Federated Learning for Privacy-Preserving Liver Lesion Detection and Classification</div>
-      <div class="pub-journal">Springer Nature Singapore</div>
-      <div class="pub-year">Click to view abstract & details</div>
-    </div>
-  </div>
-</section>
+      <p>
+        Hi, I am Plabon, a Lecturer at the
+        <a href="https://uap-bd.edu" target="_blank">University of Asia Pacific</a>
+        and an M.Sc. candidate in Computer Science and Engineering (expected July 2026).
+        I am actively seeking fully funded PhD positions for <strong>Spring 2027</strong>.
+      </p>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="section-header">
-    <span class="section-num">03</span>
-    <h2 class="section-title">Education</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="edu-timeline">
-    <div class="edu-item">
-      <div class="edu-period">Jul 2024 — Jul 2026 (Expected)</div>
-      <div class="edu-degree">Master of Science in Computer Science</div>
-      <div class="edu-institution">University of Asia Pacific (UAP), Dhaka, Bangladesh</div>
-      <div class="edu-detail">Thesis focus: Large Language Models & Federated Learning</div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-period">Jul 2020 — Jul 2024</div>
-      <div class="edu-degree">Bachelor of Science in Computer Science</div>
-      <div class="edu-institution">University of Asia Pacific (UAP), Dhaka, Bangladesh</div>
-      <div class="edu-detail">Strong academic performance · Multiple VC & Dean's Honor Awards</div>
-    </div>
-    <div class="edu-item">
-      <div class="edu-period">2017 — 2019</div>
-      <div class="edu-degree">Higher Secondary Certificate (HSC) — Science</div>
-      <div class="edu-institution">Pangsha Govt. College, Rajbari</div>
-    </div>
-    <div class="edu-item" style="padding-bottom:0">
-      <div class="edu-period">2015 — 2017</div>
-      <div class="edu-degree">Secondary School Certificate (SSC) — Science</div>
-      <div class="edu-institution">Yakub Ali Chowdhury Bidhapith</div>
-    </div>
-  </div>
-</section>
+      <p>
+        My research focuses on three interconnected problems: making <strong>Federated learning</strong> robust 
+        under heterogeneous, low-resource data distributions; grounding <strong>Large language models</strong> 
+        to produce reliable outputs where training corpora are sparse; and adapting <strong>Explainability</strong> 
+        mechanisms for communities outside standard benchmark assumptions.
+      </p>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-  <div class="section-header">
-    <span class="section-num">04</span>
-    <h2 class="section-title">Experience</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="exp-grid">
-    <div class="exp-card">
-      <div class="exp-period">Jul 2025 — Present</div>
-      <div class="exp-title">Lecturer</div>
-      <div class="exp-org">University of Asia Pacific (UAP) · Dhaka</div>
-      <div class="exp-desc">Teaching undergraduate CSE courses, supervising students, and conducting research in LLMs and intelligent systems. Co-convenor of the UAP Programming Contest Club.</div>
-    </div>
-    <div class="exp-card">
-      <div class="exp-period">May 2025 — Jul 2025</div>
-      <div class="exp-title">Implementation Engineer</div>
-      <div class="exp-org">DataSoft Systems Bangladesh Limited · Dhaka</div>
-      <div class="exp-desc">Built and maintained scalable web applications using Java, Spring Boot, and Angular. Developed RESTful APIs and dynamic frontend interfaces.</div>
-    </div>
-    <div class="exp-card">
-      <div class="exp-period">Jan 2025 — Apr 2025</div>
-      <div class="exp-title">Software Engineering Intern</div>
-      <div class="exp-org">DataSoft Systems Bangladesh Limited · Dhaka</div>
-      <div class="exp-desc">Learned software development best practices and contributed to the design and implementation of web applications.</div>
-    </div>
-    <div class="exp-card">
-      <div class="exp-period">Jul 2024 — Jan 2025</div>
-      <div class="exp-title">Teaching Assistant</div>
-      <div class="exp-org">University of Asia Pacific (UAP) · Dhaka</div>
-      <div class="exp-desc">Assisted in lesson delivery, graded assignments, provided student feedback, prepared instructional materials, and conducted tutoring sessions.</div>
-    </div>
-    <div class="exp-card">
-      <div class="exp-period">Jan 2024 — May 2024</div>
-      <div class="exp-title">Research Intern</div>
-      <div class="exp-org">Advanced Machine Intelligence Research Lab (AMIRL) · Dhaka</div>
-      <div class="exp-desc">Engaged in advanced machine intelligence and deep learning research. Contributed to research papers and participated in lab meetings, workshops, and experiments.</div>
-    </div>
-  </div>
-</section>
+      <p>
+        I completed my B.Sc. and am pursuing my M.Sc. at the
+        <a href="https://uap-bd.edu" target="_blank">University of Asia Pacific (UAP)</a>,
+        Bangladesh.
+        My M.Sc. thesis, <strong>BanglaLex</strong>, fine-tunes large language models for Bangla legal advisory 
+        using a domain-specific RAG pipeline and a hallucination grounding mechanism to suppress 
+        factually unreliable outputs - a contribution applicable to any low-resource domain 
+        where reliability is critical.
+      </p>
 
-<!-- AWARDS -->
-<section id="awards">
-  <div class="section-header">
-    <span class="section-num">05</span>
-    <h2 class="section-title">Awards & Achievements</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="awards-section-grid">
-    <div>
-      <div class="awards-category-title">Academic Awards</div>
-      <div class="awards-list">
-        <div class="award-item"><div class="award-icon">🏛️</div><div class="award-content"><div class="award-title">Vice Chancellor's Honor Award × 5</div><div class="award-org">UAP · Spring 2021 · Spring 2022 · Fall 2022 · Spring 2023 · Fall 2023</div></div></div>
-        <div class="award-item"><div class="award-icon">🏅</div><div class="award-content"><div class="award-title">Dean's Honor Award</div><div class="award-org">UAP · Fall 2021</div></div></div>
+      <p>
+        My B.Sc. thesis conducted a systematic evaluation of five CNN architectures 
+        (CNN, MobileNet, ResNet, VGG19, Inception) across three federated aggregation 
+        algorithms (FedAvg, FedProx, FedOpt) for privacy-preserving Bangla sign language detection 
+        eliminating reliance on centralized biometric data. The work was published in Engineering 
+        Applications of Artificial Intelligence (Q1, IF: 8.0). 
+      </p>
+
+      <p>
+        Have any questions? I'm always happy to meet new people. Please just reach me out at connectplabon [at] gmail [dot] com!
+      </p>
+
+      <div class="social-links">
+        <a href="mailto:connectplabon@gmail.com">
+          ✉ Email
+        </a>
+        <a href="https://github.com/Plabon-Dutta" target="_blank">
+          ⌥ GitHub
+        </a>
+        <a href="https://linkedin.com/in/jayonto-dutta-plabon" target="_blank">
+          in LinkedIn
+        </a>
+        <a href="https://scholar.google.com/citations?user=Rt2lAwsAAAAJ" target="_blank">
+          Scholar
+        </a>
+        <!-- <a href="https://plabon-dutta.github.io" target="_blank">
+          ↗ Portfolio
+        </a> -->
       </div>
     </div>
-    <div>
-      <div class="awards-category-title">Programming & Competition Awards</div>
-      <div class="awards-list">
-        <div class="award-item"><div class="award-icon">🎓</div><div class="award-content"><div class="award-title">ICPC-Jamilur Reza Choudhury Scholarship × 3</div><div class="award-org">UAP · Fall 2022 · Spring 2023 · Fall 2023</div></div></div>
-        <div class="award-item"><div class="award-icon">🥇</div><div class="award-content"><div class="award-title">Champion</div><div class="award-org">UAP Intra University Programming Contest (Junior) · 2022</div></div></div>
-        <div class="award-item"><div class="award-icon">🥈</div><div class="award-content"><div class="award-title">1st Runner Up</div><div class="award-org">EEE Tech Fest 2.0 Intra University Programming Contest · 2024</div></div></div>
-        <div class="award-item"><div class="award-icon">🥉</div><div class="award-content"><div class="award-title">2nd Runner Up</div><div class="award-org">EEE Tech Fest 1.0 Intra University Programming Contest · 2023</div></div></div>
-        <div class="award-item"><div class="award-icon">🏆</div><div class="award-content"><div class="award-title">Champion</div><div class="award-org">UAP Intra Departmental Hackathon · 2022</div></div></div>
-        <div class="award-item"><div class="award-icon">🥈</div><div class="award-content"><div class="award-title">1st Runner Up</div><div class="award-org">CSE Cultural Fest Treasure Hunt Competition · 2024</div></div></div>
-        <div class="award-item"><div class="award-icon">💻</div><div class="award-content"><div class="award-title">ICPC Asia Dhaka Regional Contestant x 3</div><div class="award-org">2021 · 2023 · 2024</div></div></div>
-      </div>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <h2 class="section-title">News</h2>
+    <div class="news-feed" id="newsFeed" aria-label="News feed">
+      <table class="news-table">
+        <tbody>
+          <tr>
+            <td>Jul '25</td>
+            <td>Started as <strong>Lecturer</strong> in the Dept. of CSE at the University of Asia Pacific.</td>
+          </tr>
+          <tr>
+            <td>Jun '25</td>
+            <td>New paper accepted: <em>From centralization to decentralization: Blockchain's role in transforming social media platforms</em> in <strong>IEEE Access</strong>.</td>
+          </tr>
+          <tr>
+            <td>May '25</td>
+            <td>Three book chapters published in <strong>Federated Learning in Health Care Technology</strong> (Springer Nature Singapore) on privacy-preserving medical image analysis.</td>
+          </tr>
+          <tr>
+            <td>May '25</td>
+            <td>Paper accepted at the <strong>International Conference on Human-Computer Interaction (HCII 2025)</strong> on privacy-preserving ML for productivity tracking.</td>
+          </tr>
+          
+          <tr>
+            <td>Dec '24</td>
+            <td>ICPC Asia Dhaka Regional contestant for the third time (also 2021, 2023). 🏆</td>
+          </tr>
+          <tr>
+            <td>Sep '24</td>
+            <td>Paper published in <strong>IEEE Access</strong> on federated learning-based architecture for personalized next emoji prediction for social media comments.</td>
+          </tr>
+          <tr>
+            <td>Aug '24</td>
+            <td>Paper published in <strong>Engineering Applications of Artificial Intelligence</strong> (Q1, IF: 8.0) on explainable federated learning for Bangla sign language detection.</td>
+          </tr>
+          <tr>
+            <td>July '24</td>
+            <td>Completed my B.Sc. in Computer Science and Engineering.</td>
+          </tr>
+          <tr>
+            <td>Nov '22</td>
+            <td>Volunteered at the <strong>45th ICPC World Finals</strong>, Dhaka, Bangladesh — the first time the World Finals was hosted in Bangladesh. 🌍</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </div>
-</section>
+    <p class="news-hint" id="newsHint">Scroll inside the news box to see older updates</p>
+  </section>
 
-<!-- COMPETITIVE PROGRAMMING -->
-<section id="cp">
-  <div class="section-header">
-    <span class="section-num">06</span>
-    <h2 class="section-title">Competitive Programming</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="cp-grid">
-    <div class="cp-stat"><div class="cp-stat-num">2K+</div><div class="cp-stat-label">Problems Solved</div></div>
-    <div class="cp-stat"><div class="cp-stat-num">3×</div><div class="cp-stat-label">ICPC Regionalist</div></div>
-    <div class="cp-stat"><div class="cp-stat-num">Specialist</div><div class="cp-stat-label">Codeforces</div></div>
-    <div class="cp-stat"><div class="cp-stat-num">3★</div><div class="cp-stat-label">CodeChef</div></div>
-  </div>
-  <p style="font-size:0.88rem;color:var(--ink2);line-height:1.8;">
-    - Participated in <strong>10+ national programming contests</strong> including NCPC, IUPC (BUET, SUST, IUT, UITS), and IUCPC.<br>- Active across Codeforces, CodeChef, AtCoder, LightOJ, UVA, SPOJ, and CSES.<br>- Currently serving as <strong>Co-convenor</strong> of the UAP Programming Contest Club, mentoring the next generation of competitive programmers.
-  </p>
-</section>
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2 class="section-title">Publications</h2>
+    <ul class="pub-list">
 
-<!-- DOCUMENTS -->
-<section id="documents">
-  <div class="section-header">
-    <span class="section-num">07</span>
-    <h2 class="section-title">Documents</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="docs-grid">
-    <a class="doc-card" href="cv.pdf" onclick="event.preventDefault();window.open('cv.pdf', '_blank')">
-      <div class="doc-icon">📄</div>
-      <div class="doc-title">Curriculum Vitae</div>
-      <div class="doc-desc">Full academic and professional CV including publications, experience, and awards.</div>
-      <div class="doc-action">Download PDF →</div>
-    </a>
-    <a class="doc-card" href="Statement of Purpose_Plabon.pdf" onclick="event.preventDefault();window.open('Statement of Purpose_Plabon.pdf', '_blank')">
-      <div class="doc-icon">📝</div>
-      <div class="doc-title">Statement of Purpose</div>
-      <div class="doc-desc">My research vision, motivation, and PhD aspirations for Australian universities.</div>
-      <div class="doc-action">Read SOP →</div>
-    </a>
-    <a class="doc-card" href="#" onclick="event.preventDefault();alert('Upload your Research Proposal and replace href with the file link.')">
-      <div class="doc-icon">🔬</div>
-      <div class="doc-title">Research Proposal</div>
-      <div class="doc-desc">Proposed PhD research direction in LLMs and cyber-physical system security.</div>
-      <div class="doc-action">View Proposal →</div>
-    </a>
-  </div>
-</section>
+      <li class="pub-item">
+        <div><span class="pub-venue q1">EAAI</span></div>
+        <div>
+          <div class="pub-title">Explainable federated learning for privacy-preserving Bangla sign language detection</div>
+          <div class="pub-authors">BS Diba, <strong>JD Plabon</strong>, MDM Rahman, D Mistry, AK Saha, MF Mridha</div>
+          <div class="pub-journal">Engineering Applications of Artificial Intelligence, 2024 · Q1 · IF: 8.0</div>
+          <div class="pub-meta">
+            <span class="pub-badge cite">20 citations</span>
+            <a class="pub-link" href="https://doi.org/10.1016/j.engappai.2024.108657" target="_blank">DOI</a>
+            <a class="pub-link" href="https://github.com/Plabon-Dutta" target="_blank">Code</a>
+          </div>
+        </div>
+      </li>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-header">
-    <span class="section-num">08</span>
-    <h2 class="section-title">Get in Touch</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="contact-grid">
-    <div class="contact-left">
-      <p>I am actively seeking PhD opportunities. If you are a supervisor working in LLMs, Federated Learning, NLP, or Cyber-Physical System Security — I would love to connect and discuss potential research collaboration.</p>
-      <div class="contact-links">
-        <a href="mailto:plabondutta0@gmail.com" class="contact-link"><span class="contact-link-icon">✉️</span>connectplabon@gmail.com</a>
-        <a href="https://linkedin.com/in/jayonto-dutta-plabon" target="_blank" class="contact-link"><span class="contact-link-icon">💼</span>linkedin.com/in/jayonto-dutta-plabon</a>
-        <a href="https://github.com/Plabon-Dutta" target="_blank" class="contact-link"><span class="contact-link-icon">💻</span>github.com/Plabon-Dutta</a>
-        <a href="https://scholar.google.com/citations?user=Rt2lAwsAAAAJ&hl=en&oi=ao" target="_blank" class="contact-link"><span class="contact-link-icon">🎓</span>Google Scholar</a>
-        <a href="tel:+8801851316950" class="contact-link"><span class="contact-link-icon">📞</span>+880 1851316950</a>
-      </div>
-    </div>
-    <div class="open-to">
-      <div class="open-to-label">Currently Open To</div>
-      <div class="open-to-text">PhD Opportunities</div>
-      <div class="open-to-items">
-        <div class="open-to-item">Fully funded PhD scholarships</div>
-        <div class="open-to-item">Research collaboration in LLMs & FL</div>
-        <!-- <div class="open-to-item">Supervisors in Cyber-Physical Security</div> -->
-        <div class="open-to-item">Postgraduate research programs</div>
-        <div class="open-to-item">Academic networking & mentorship</div>
-      </div>
-    </div>
-  </div>
-</section>
+      <li class="pub-item">
+        <div><span class="pub-venue q2">IEEE Access</span></div>
+        <div>
+          <div class="pub-title">Federated Learning-Based Architecture for Personalized Next Emoji Prediction for Social Media Comments</div>
+          <div class="pub-authors">D Mistry, <strong>JD Plabon</strong>, BS Diba, MSH Mukta, MF Mridha</div>
+          <div class="pub-journal">IEEE Access, 2024 · Q2 · IF: 3.6</div>
+          <div class="pub-meta">
+            <span class="pub-badge cite">17 citations</span>
+            <a class="pub-link" href="https://doi.org/10.1109/ACCESS.2024.3448470" target="_blank">DOI</a>
+            <a class="pub-link" href="https://github.com/Plabon-Dutta" target="_blank">Code</a>
+          </div>
+        </div>
+      </li>
 
-<!-- BACK TO TOP BUTTON -->
-<button class="back-to-top" id="backToTopBtn" onclick="scrollToTop()" title="Back to top">↑</button>
+      <li class="pub-item">
+        <div><span class="pub-venue q1">CEE</span></div>
+        <div>
+          <div class="pub-title">Open problems and challenges in federated learning for IoT: A comprehensive review and strategic guide</div>
+          <div class="pub-authors">BS Diba, <strong>JD Plabon</strong>, TJ Mowla, N Nahar, D Mistry, S Sarker, MF Mridha, J Shin</div>
+          <div class="pub-journal">Computers and Electrical Engineering, 2025 · Q1 · IF: 4.9 · Review Article</div>
+          <div class="pub-meta">
+            <span class="pub-badge cite">17 citations</span>
+            <a class="pub-link" href="https://doi.org/10.1016/j.compeleceng.2025.110515" target="_blank">DOI</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div><span class="pub-venue q2">IEEE Access</span></div>
+        <div>
+          <div class="pub-title">From centralization to decentralization: Blockchain's role in transforming social media platforms</div>
+          <div class="pub-authors">BS Diba, <strong>JD Plabon</strong>, N Tasnim, M Hossain, D Mistry, S Sarker, MF Mridha, Y Okuyama, J Shin</div>
+          <div class="pub-journal">IEEE Access, 2025 · Q2 · IF: 3.6 · Review Article</div>
+          <div class="pub-meta">
+            <span class="pub-badge cite">10 citations</span>
+            <a class="pub-link" href="https://doi.org/10.1109/ACCESS.2025.3561663" target="_blank">DOI</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div><span class="pub-venue conf">HCII</span></div>
+        <div>
+          <div class="pub-title">Personalized Pomodoro Productivity Tracking with Privacy-Preserving Machine Learning in Human-Computer Interaction</div>
+          <div class="pub-authors">D Mistry, BS Diba, <strong>JD Plabon</strong>, SU Ahmed, MF Mridha</div>
+          <div class="pub-journal">International Conference on Human-Computer Interaction, 2025</div>
+          <div class="pub-meta">
+            <a class="pub-link" href="https://doi.org/10.1007/978-3-031-93965-5_29" target="_blank">DOI</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div><span class="pub-venue book">Springer</span></div>
+        <div>
+          <div class="pub-title">Privacy-Preserving Kidney Stone Detection from X-Ray Image Using Federated Learning</div>
+          <div class="pub-authors"><strong>JD Plabon</strong>, MM Rahaman, MR Tonmoy, MG Kibriya, A Ishraq</div>
+          <div class="pub-journal">Federated Learning in Health Care Technology · Springer Nature Singapore, 2025</div>
+          <div class="pub-meta">
+            <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_4" target="_blank">DOI</a>
+            <!-- <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_3" target="_blank">Ch2</a>
+            <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_6" target="_blank">Ch1</a> -->
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div><span class="pub-venue book">Springer</span></div>
+        <div>
+          <div class="pub-title">Transforming Healthcare Analytics: Federated Learning for Privacy-Preserving Liver Lesion Detection and Classification</div>
+          <div class="pub-authors">MS Islam, <strong>JD Plabon</strong>, N Nahar, N Tasnim, SMRA Masud, J Shin, MR Tonmoy.</div>
+          <div class="pub-journal">Federated Learning in Health Care Technology · Springer Nature Singapore, 2025</div>
+          <div class="pub-meta">
+            <!-- <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_4" target="_blank">DOI</a> -->
+            <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_3" target="_blank">DOI</a>
+            <!-- <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_6" target="_blank">Ch1</a> -->
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div><span class="pub-venue book">Springer</span></div>
+        <div>
+          <div class="pub-title">Federated Learning Strategies for Confidential Leukemia Detection from Medical Images</div>
+          <div class="pub-authors"><strong>JD Plabon</strong>, M Hossain, MA Kabir, D Mistry, MA Hamid</div>
+          <div class="pub-journal">Federated Learning in Health Care Technology · Springer Nature Singapore, 2025</div>
+          <div class="pub-meta">
+            <!-- <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_4" target="_blank">DOI</a> -->
+            <!-- <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_3" target="_blank">Ch2</a> -->
+            <a class="pub-link" href="https://doi.org/10.1007/978-981-96-8353-6_6" target="_blank">DOI</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-item">
+        <div><span class="pub-venue collab">Collab</span></div>
+        <div>
+          <div class="pub-title">A Multisectoral Study of Mpox Epidemiology, Resistance Surveillance, and Policy Gaps: Toward a One Health Framework</div>
+          <div class="pub-authors">D Mistry, M Hossain, BS Diba, <strong>JD Plabon</strong>, MA Shams, MT Rahman, ASM Bakibillah</div>
+          <div class="pub-journal">Clinical Reviews in Allergy &amp; Immunology, 2025 · Q1 · IF: 11.3 · Review Article</div>
+          <div class="pub-meta">
+            <span class="pub-badge cite">1 citation</span>
+            <a class="pub-link" href="https://doi.org/10.1007/s12016-025-09121-7" target="_blank">DOI</a>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <!-- SERVICE -->
+  <section id="service">
+    <h2 class="section-title">Service</h2>
+    <ul class="service-list">
+
+      <li class="service-item">
+        <div>
+          <div class="service-role">Co-Convenor · UAP Programming Contest Club (PCC)</div>
+          <div class="service-desc">Coordinate programming contests, training sessions, and ICPC preparatory activities.</div>
+        </div>
+        <div class="service-date">Jul 2025 – Present</div>
+      </li>
+
+      <li class="service-item">
+        <div>
+          <div class="service-role">Volunteer · 45th ICPC World Finals, Dhaka, Bangladesh</div>
+          <div class="service-desc">Assisted in organizing the most prestigious collegiate programming contest in the world, hosted in Bangladesh for the first time.</div>
+        </div>
+        <div class="service-date">Nov 2024</div>
+      </li>
+
+      <li class="service-item">
+        <div>
+          <div class="service-role">President · UAP Programming Contest Club (PCC)</div>
+          <div class="service-desc">Led club operations, organized intra-university programming contests, and mentored members preparing for ICPC and national-level competitions.</div>
+        </div>
+        <div class="service-date">Dec 2023 – Jul 2024</div>
+      </li>
+
+      <li class="service-item">
+        <div>
+          <div class="service-role">President · Robotics Club, CSE Department, UAP</div>
+          <div class="service-desc">Directed club activities including robotics workshops and inter-university competitions.</div>
+        </div>
+        <div class="service-date">Jan 2024 – Jul 2024</div>
+      </li>
+
+    </ul>
+  </section>
+
+</main>
 
 <footer>
-  © <span id="footerYear"></span> Jayonto Dutta Plabon · Dhaka, Bangladesh
+  <p style="margin-top:0.3rem;">
+     Thank you for taking the time to visit my site! You can reach me via
+    <a href="mailto:connectplabon@gmail.com">connectplabon@gmail.com</a>
+  </p>
+  <p>© 2026 Jayonto Dutta Plabon · Last updated: June 2026</p>
 </footer>
 
-<!-- MODAL -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
-  <div class="modal" id="modalBox">
-    <button class="modal-close" onclick="closeModal()">✕</button>
-    <div id="modalContent"></div>
-  </div>
-</div>
-
 <script>
-  // Back to top button
-  const backToTopBtn = document.getElementById('backToTopBtn');
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      backToTopBtn.classList.add('show');
-    } else {
-      backToTopBtn.classList.remove('show');
-    }
-  });
-  
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  
-  // Footer year
-  document.getElementById('footerYear').textContent = new Date().getFullYear();
+  const themeToggle = document.getElementById('themeToggle');
+  const html = document.documentElement;
 
-  // Scroll progress + nav active
-  const sections = document.querySelectorAll('section[id]');
-  const navAs = document.querySelectorAll('.nav-links a[href^="#"]');
-
-  window.addEventListener('scroll', () => {
-    const scrolled = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-    document.getElementById('scrollBar').style.width = scrolled + '%';
-    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-
-    // Active nav link
-    let current = '';
-    sections.forEach(sec => {
-      if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
-    });
-    navAs.forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-    });
-  });
-
-  // Intersection observer
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-  document.querySelectorAll('.edu-item, .exp-card, .award-item').forEach(el => observer.observe(el));
-
-  // Stagger delays
-  document.querySelectorAll('.exp-card').forEach((el,i) => el.style.transitionDelay = (i*0.1)+'s');
-  document.querySelectorAll('.award-item').forEach((el,i) => el.style.transitionDelay = (i*0.07)+'s');
-  document.querySelectorAll('.edu-item').forEach((el,i) => el.style.transitionDelay = (i*0.12)+'s');
-
-  // Dark mode
-  function toggleTheme() {
-    const html = document.documentElement;
+  function updateThemeToggle() {
     const isDark = html.getAttribute('data-theme') === 'dark';
-    console.log('Toggling theme. Current isDark:', isDark);
+    themeToggle.textContent = isDark ? '☀' : '☾';
+    themeToggle.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
     html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    // document.getElementById('themeIcon').textContent = isDark ? '🌙' : '☀️';
-    const themeIcon = document.getElementById('themeIcon');
-
-    if (themeIcon) {
-        themeIcon.textContent = isDark ? '🌙' : '☀️';
-    } else {
-        console.warn('Theme icon element not found');
-    }
-    document.querySelector('.theme-toggle').innerHTML = (isDark ? '🌙 Dark' : '☀️ Light');
     localStorage.setItem('theme', isDark ? 'light' : 'dark');
-  }
+    updateThemeToggle();
+  });
 
-  // Restore theme
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark') {
-    document.documentElement.setAttribute('data-theme','dark');
-    document.getElementById('themeIcon').textContent = '☀️';
-    document.querySelector('.theme-toggle').innerHTML = '☀️ Light';
-  }
-  if (saved === 'light') {
-    document.documentElement.setAttribute('data-theme','light');
-    document.getElementById('themeIcon').textContent = '🌙';
-    document.querySelector('.theme-toggle').innerHTML = '🌙 Dark';
-  }
+  updateThemeToggle();
 
-  // Mobile menu
-  function toggleMobile() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-    document.getElementById('hamburger').classList.toggle('open');
-  }
-  function closeMobile() {
-    document.getElementById('mobileMenu').classList.remove('open');
-    document.getElementById('hamburger').classList.remove('open');
-  }
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const sections = document.querySelectorAll('main section[id]');
 
-  // Publication modal
-  const pubData = {
-    pub1: { title:'Explainable federated learning for privacy-preserving bangla sign language detection', journal:'Engineering Applications of Artificial Intelligence · Elsevier (Q1)', year:'2024', doi:'https://doi.org/10.1016/j.engappai.2024.108657', abstract:'Sign language plays a crucial role as an inclusive mode of communication for individuals experiencing challenges addressing both hearing and speech aspects. Bengali Sign Language serves as a lifeline for those with hearing or speech impairments, enabling effective communication. However, the intricacies of sign language, especially Bengali Sign Language, present unique challenges. Traditional methods of sign language recognition and interpretation involve privacy concerns as they rely on central servers. However, the research on identifying Bengali signs from hand gestures is still largely unexplored, and to the best of current knowledge, no research specifically focuses on safeguarding privacy in this aspect. Therefore, this research introduces a groundbreaking approach utilizing federated learning (FL), ensuring user privacy while classifying and detecting Bengali Signs from hand gestures. After experimenting with various averaging algorithms, employing Visual Geometry Group (VGG19) with Federated averaging (FedAVG) yielded outstanding results. With the utilization of FedAVG, this system achieved a remarkable accuracy rate of 98.36% with the VGG19 model, representing a significant advancement in the realms of sign language interpretation. This research makes substantial contributions to areas related to sign language detection and privacy-aware machine learning techniques, benefiting the deaf community and society as a whole.' },
-    pub2: { title:'Federated Learning-Based Architecture for Personalized Next Emoji Prediction for Social Media Comments', journal:'IEEE Access · IEEE', year:'2024', doi:'https://doi.org/10.1109/ACCESS.2024.3448470', abstract:'In the era of digital communication, emojis have become the vibrant palette of people’s textual expressions, adding depth and emotion to messages. However, deciphering the subtle nuances of emojis poses a unique challenge due to their inherent ambiguity. The quest for predicting the next emoji in technological devices has emerged at the forefront of predictive analytics, demanding the analysis of extensive and diverse datasets while respecting user privacy. Enter Federated Learning (FL), a groundbreaking approach that thrives on learning from decentralized data sources without compromising confidentiality. This study delves into the unexplored realm of Federated Learning-based emoji prediction. Utilizing a tailored adaptation of BERT with a rich corpus of text (drawn from social media), encompassing both words and emojis, the author’s innovative architecture aims to predict the most fitting emoji for a given text while prioritizing user privacy. Welcome to EmojiSculpt, where the future of personalized emoji prediction takes center stage.' },
-    pub3: { title:'Open problems and challenges in federated learning for IoT: A comprehensive review and strategic guide', journal:'Computers and Electrical Engineering . Elsevier', year:'2025', doi:'https://doi.org/10.1016/j.compeleceng.2025.110515', abstract:'Federated Learning is defined as a decentralized approach to machine learning that enables multiple devices to collaboratively train a shared model while keeping their data localized and private. This paper offers a comprehensive review of FL’s integration with the Internet of Things (IoT), serving as a guidebook for future research directions through 2033. It explores the current state-of-the-art applications of FL within IoT, emphasizing its potential to enhance critical functionalities such as secure data sharing, computational offloading, attack detection, localization, and mobile crowdsensing. The paper identifies key challenges, including resource constraints, communication efficiency, and the need for robust defenses against adversarial attacks, and proposes targeted research initiatives to address these issues. By encouraging interdisciplinary collaboration and the development of innovative algorithmic solutions, this guide outlines a clear roadmap for advancing the integration of FL within IoT, aiming to foster the creation of secure, scalable, and privacy-preserving IoT networks that will underpin the technological landscape of 2033.' },
-    pub4: { title:'From Centralization to Decentralization: Blockchain’s Role in Transforming Social Media Platforms', journal:'IEEE Access . IEEE', year:'2025', doi:'https://doi.org/10.1109/ACCESS.2025.3561663', abstract:'Blockchain is influencing the social media platforms by promising to solve the biggest issues of today, such as privacy concerns and content moderation, and the ability to provide a decentralized system for the management of social media platforms through cryptographic techniques and distributed structures. Conventionally, social media systems are based on central architectures that may indirectly solve the problems of data privacy and platform responsibility since there are increased threats, including identity theft and fake news spread across such systems. Blockchain has stepped up as an anti-centralized platform that allows multiple numbers of users to transact securely and authentically through P2P channels without a middleman. Here in this survey, we introduce a brief overview of the latest trends of the blockchain protocols and the interactions with the social media platforms, as well as present a systematic review of the related area. Specifically, the use case we consider and elaborate on is how blockchain can be applied to various types of social media services: smart contract-based content moderation platforms, user incentives using token economics, social media governance through decentralized autonomous organizations, and cross-chain connections. We then go further and offer a comprehensive literature review of blockchain incorporating main social media applications that cutting across them include identity, tokenization, and self-governance. The key points that can be derived from this review of the blockchain-enabled social media services and applications are also underlined here. We conclude this survey by listing the existing issues in the field, including scalability and compliance with the existing regulations, and suggesting the possible areas of research in this ever-evolving field.' },
-    pub5: { title:'A Multisectoral Study of Mpox Epidemiology, Resistance Surveillance, and Policy Gaps: Toward a One Health Framework', journal:'Clinical Reviews in Allergy & Immunology', year:'2025', doi:'https://doi.org/10.1007/s12016-025-09121-7', abstract:'Mpox, formerly known as monkeypox, has recently spread beyond its traditional epidemic areas. Several regions of Africa have been affected and have become a health concern globally. This review presents epidemiology, clinical symptoms, diagnostic developments, treatment methods, and policy gaps of Mpox. Methodologically, this review incorporates data from over 70 peer-reviewed journal articles, official epidemiological bulletins, and curated surveillance datasets from WHO, CDC, and PubMed to provide an evidence-based analysis of Mpox. As all data were derived from secondary sources, no sampling method was utilized. Firstly, we examined the primary causes of the virus’s resurgence, including zoonotic spillover, human-to-human transmission, and globalization, which contribute to the spread of Mpox disease. Next, we discussed different treatment alternatives for Mpox, such as Tecovirimat and JYNNEOS vaccination, diagnostic techniques including polymerase chain reaction (PCR), serological tests, and new point-of-care diagnostics based on clustered regularly interspaced short palindromic repeats (CRISPR). Then, we highlighted the public health challenges of Mpox, including misdiagnosis, healthcare disparities, and the impact on immunosuppressed populations, particularly HIV-positive individuals. Finally, this study discussed the socioeconomic implications of Mpox outbreaks, emphasizing the need for global collaboration, enhanced surveillance, and robust vaccination programs to minimize future outbreaks.' },
-    pub6: { title:'Personalized Pomodoro Productivity Tracking with Privacy-Preserving Machine Learning in Human-Computer Interaction', journal:'International Conference on Human-Computer Interaction', year:'2025', doi:'https://doi.org/10.1007/978-3-031-93965-5_29', abstract:'This research addresses the growing challenge of maintaining focus and minimizing distractions in the context of time management, particularly among students. With the increasing prevalence of entertainment-related distractions, especially in academic settings, it is essential to explore methods that encourage greater attention and productivity. In this study, we implemented a time management method aimed at increasing attention span and reducing entertainment-related distractions. The method was tested over 672 sessions involving 12 students, where we tracked the duration of work and entertainment activities, as well as the Work-to-Entertainment Ratio. Our results indicate a significant improvement in focus, with students allocating more time to work and less to entertainment. The Work-to-Entertainment Ratio steadily increased, reflecting a stronger focus on productive tasks, while the frequency of entertainment decreased, signaling fewer distractions. These findings suggest that our time management method effectively enhanced students’ attention and productivity across the sessions conducted.' },
-    pub7: { title:'Federated Learning Strategies for Confidential Leukemia Detection from Medical Images', journal:'Springer Nature Singapore', year:'2025', doi:'https://doi.org/10.1007/978-981-96-8353-6_6', abstract:'Leukemia generally affects the bone marrow and blood, which is a need for early detection and precise treatment planning. The advancement of diagnostic models in medical imaging impacts patient outcomes. However, traditional approaches to model training create substantial privacy risks due to the sensitive patient data. FL appears to be a viable concept that protects patient privacy while facilitating cooperative training of models across decentralized sources of data. This method complies with ethical standards and privacy regulations, mitigating risks of data breaches and unauthorized access. Federated learning advances the collective intelligence of diverse medical imaging datasets from multiple institutions. By integrating federated learning principles, researchers can achieve advancements in leukemia detection while keeping high standards of data confidentiality. The Fed AVG algorithm shows us this approach, demonstrating efficient, privacy-preserving model training through iterative local updates and global aggregation.' },
-    pub8: { title:'Privacy-Preserving Kidney Stone Detection from X-Ray Image Using Federated Learning', journal:'Springer Nature Singapore', year:'2025', doi:'https://doi.org/10.1007/978-981-96-8353-6_4', abstract:'Kidney stones are hardened masses that form in the kidneys and can block the urinary tract, causing severe symptoms. Imaging methods like X-rays, computed tomography (CT), and ultrasound are commonly employed for detection; however, their clinical interpretation may sometimes lack precision. Recent studies demonstrated the promise of artificial intelligence in kidney stone detection, yet many of them overlook important privacy concerns. To address this, we propose a novel approach utilizing federated learning (FL) for the detection of kidney stones in X-ray images. Our study seeks to demonstrate the effectiveness of FL by employing the Federated Averaging (FedAvg) technique in combination with the VGG16 model. FL enables model training collaboratively across decentralized data sources while preserving confidentiality. Our focus is on evaluating specific performance metrics, including accuracy, precision, recall, and F1-score, by comparing the results obtained from both test and training datasets distributed across multiple nodes. Remarkably, a 99.92% accuracy rate, 100% precision, 99.90% recall, and 99.95% F1-score is reached on FedAvg, in the test data and 99.98% accuracy and above for the other metrics on the train data. Besides this, Federated Learning has become the most successful way to keep the accuracy and generalization of the model through multiple decentralized datasets. These results reveal the tremendous power of Federated Learning to make the models work exceptionally well and generalize to out-of-distribution data.' },
-    pub9: { title:'Transforming Healthcare Analytics: Federated Learning for Privacy-Preserving Liver Lesion Detection and Classification', journal:'Springer Nature Singapore',  year:'2025', doi:'https://doi.org/10.1007/978-981-96-8353-6_3', abstract:'With the use of computers, physicians may more precisely detect anomalies in the liver and reduce the need for surgical interventions. Medical imaging methods such as computed tomography (CT) and magnetic resonance imaging (MRI) are primarily responsible for the early identification and detection of liver abnormalities. Due to the high noise and low resolution of these pictures, it might be difficult to segment and identify liver lesions in them. On this issue, several novel machine learning and image analysis approaches have been employed progressively but their effectiveness remains limited. There is still a need for an automated and precise model that can monitor, identify, and diagnose hepatic lesions in the 3D volumes of CT and MRI. In this research, we propose a privacy-preserving architecture based on federated learning to help clinicians use their time more effectively. Several pre-trained models are employed; our suggested FedVGG19 model obtains a test accuracy of 97.03%.' }  
-  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const currentId = entry.target.id;
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+      });
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0.08 });
 
-  function openModal(id) {
-    const d = pubData[id];
-    document.getElementById('modalContent').innerHTML = `
-      <div class="modal-title">${d.title}</div>
-      <div class="modal-journal">${d.journal}</div>
-      <div class="modal-meta">Year: ${d.year} &nbsp;|&nbsp; DOI: ${d.doi}</div>
-      <a href="${d.doi}" class="btn-primary" style="font-size:0.7rem;" target="_blank" onclick="">View Full Paper →</a>
-      <div class="modal-abstract"><br><strong>Abstract:</strong><br>${d.abstract}</div>
-    `;
-    document.getElementById('modalOverlay').classList.add('open');
-  }
+  sections.forEach((section) => observer.observe(section));
 
-  function closeModal(e) {
-    if (!e || e.target === document.getElementById('modalOverlay')) {
-      document.getElementById('modalOverlay').classList.remove('open');
-    }
-  }
-  document.getElementById('modalBox').addEventListener('click', e => e.stopPropagation());
+  const newsHint = document.getElementById('newsHint');
 </script>
+
 </body>
 </html>
